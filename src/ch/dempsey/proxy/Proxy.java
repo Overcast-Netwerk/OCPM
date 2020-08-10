@@ -8,6 +8,8 @@ import com.velocitypowered.api.event.proxy.ProxyInitializeEvent;
 import com.velocitypowered.api.plugin.Plugin;
 import com.velocitypowered.api.proxy.ProxyServer;
 
+import ch.dempsey.proxy.event.ProxyPing;
+
 @Plugin(id = "OCPM", name = "Proxy Manager", version = "1.0", description = "Proxy Manager", authors = "Dempsey")
 public class Proxy {
 	
@@ -22,7 +24,7 @@ public class Proxy {
 	
 	@Subscribe
 	public void onProxyInitialize(ProxyInitializeEvent e) {
-		
+		srv.getEventManager().register(this, new ProxyPing());
 	}
 	
 	
