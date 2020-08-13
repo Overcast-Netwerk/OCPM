@@ -1,0 +1,7 @@
+{
+	"id":"proxymanager",
+	"name":"Proxy Manager",
+	"description": "overcast proxy manager",
+	"url":"https://overcast.be",
+	"main":"ch.dempsey.proxy.Proxy"	
+}

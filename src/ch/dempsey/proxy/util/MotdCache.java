@@ -22,7 +22,7 @@ public class MotdCache {
 	
 	public static String rotate() {
 		Random r = new Random();
-		return motds.get(r.nextInt(motds.size()-1));
+		return motds.get(r.nextInt(motds.size()));
 	}
 	
 }

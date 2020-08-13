@@ -9,8 +9,9 @@ import com.velocitypowered.api.plugin.Plugin;
 import com.velocitypowered.api.proxy.ProxyServer;
 
 import ch.dempsey.proxy.event.ProxyPing;
+import ch.dempsey.proxy.util.MotdCache;
 
-@Plugin(id = "OCPM", name = "Proxy Manager", version = "1.0", description = "Proxy Manager", authors = "Dempsey")
+@Plugin(id = "proxymanager", name = "Proxy Manager", version = "1.0", description = "Proxy Manager", authors = "Dempsey")
 public class Proxy {
 	
 	public static ProxyServer srv;
@@ -25,6 +26,8 @@ public class Proxy {
 	@Subscribe
 	public void onProxyInitialize(ProxyInitializeEvent e) {
 		srv.getEventManager().register(this, new ProxyPing());
+		MotdCache.add("§eIn aanbouw \n §cOvercast Netwerk");
+		MotdCache.add("§eOnderweg \n §cOvercast Netwerk");
 	}
 	
 	
